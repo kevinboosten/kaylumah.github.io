@@ -2,7 +2,6 @@
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" {% if site.language %}xml:lang="{{ site.language }}"{% endif %}>
-    
     <id>{{ page.uri | absolute_url }}</id>
     <updated>{{ build.time | date_to_xmlschema }}</updated>
     <link href="{{ page.uri | absolute_url }}" rel="self" type="application/atom+xml" />
@@ -12,23 +11,17 @@
     <icon>{{ "assets/logo_small.svg" | absolute_url }}</icon>
     <logo>{{ "assets/logo.svg" | absolute_url }}</logo>
     <rights>{{ build.copyright }}</rights>
-    <generator uri="/feed.xml" version="{{ build.short_git_hash }}">
-        Kaylumah Site Generator
-    </generator>
-    {% assign posts = site.collections['posts'] | array.sort "date" | array.reverse %}
-    {% for post in posts %}
+    <generator uri="/feed.xml" version="{{ build.short_git_hash }}">Kaylumah Site Generator</generator>
+    {%- assign posts = site.collections['posts'] | array.sort "date" | array.reverse -%}
+    {%- for post in posts -%}
     {% assign post_author = site.data.authors[post.author] %}
     <entry>
         <id>{{ post.uri | absolute_url }}</id>
         <title>{{ post.title }}</title>
         <author>
             <name>{{ post_author.full_name }}</name>
-            {% if post_author.email %}
-            <email>{{ post_author.email }}</email>
-            {% endif %}
-            {% if post_author.uri %}
-            <uri>{{ post_author.uri }}</uri>
-            {% endif %}
+            {% if post_author.email %}<email>{{ post_author.email }}</email>{% endif %}
+            {% if post_author.uri %}<uri>{{ post_author.uri }}</uri>{% endif %}
         </author>
         <published>{{ post.date | date_to_xmlschema }}</published>
         <updated>{{ post.lastmodified | date_to_xmlschema }}</updated>
