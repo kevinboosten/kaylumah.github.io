@@ -9,6 +9,28 @@ NuGet package can be shared via both public and private hosts. This way you can 
 
 Today we are looking at local package feeds.
 
+--
+- https://github.com/features/packages
+- https://docs.github.com/en/packages
+- https://docs.github.com/en/packages/learn-github-packages/about-github-packages
+- https://github.com/kaylumah?tab=packages
+- https://docs.github.com/en/packages/guides/configuring-dotnet-cli-for-use-with-github-packages
+--
+https://docs.microsoft.com/en-us/azure/devops/artifacts/?view=azure-devops
+https://docs.microsoft.com/en-us/azure/devops/artifacts/get-started-nuget?view=azure-devops&tabs=windows
+https://docs.microsoft.com/en-us/azure/devops/artifacts/nuget/publish?view=azure-devops
+https://docs.microsoft.com/en-us/azure/devops/pipelines/artifacts/build-artifacts?view=azure-devops&tabs=yaml
+
+
+
+
+
+
+
+
+
+
+
 
 -------
 
