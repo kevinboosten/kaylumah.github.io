@@ -5,6 +5,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        architect: "'Architects Daughter', cursive",
+        roboto: "'Roboto', sans-serif"
+      },
       colors: {
         brand: {
           green: '#4cae50',
@@ -26,9 +30,6 @@ module.exports = {
           },
         },
       }
-      // fontFamily: {
-      //   headline: "Poppins, sans-serif" // font-headline
-      // }
     },
   },
   variants: {
@@ -37,6 +38,7 @@ module.exports = {
   plugins: [
     // https://github.com/tailwindlabs/tailwindcss-typography#responsive-variants
     // https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js
-    require('@tailwindcss/typography')
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/line-clamp')
   ]
 }
